@@ -25,17 +25,13 @@ def iris(results_path) :
     - `Species`
     """)
 
-    st.header("📊 Visualizations")
+    st.header("📉 Visualizations")
 
-    col1, col2 = st.columns(2)
+    with st.expander("🔲 Box Plots"):
+        st.image(f"{results_path}/BoxPlots.jpg", use_container_width=True)
 
-    with col1 :
-        with st.expander("🔲 Box Plots"):
-            st.image(f"{results_path}/BoxPlots.jpg", use_container_width=True)
-
-    with col2: 
-        with st.expander("📉 Histograms"):
-            st.image(f"{results_path}/HistPlots.jpg", use_container_width=True)
+    with st.expander("📊 Histograms"):
+        st.image(f"{results_path}/HistPlots.jpg", use_container_width=True)
 
     with st.expander("🔢 Count Plot (Species Distribution)"):
         st.image(f"{results_path}/CountPlot.jpg", use_container_width=True)
@@ -43,15 +39,11 @@ def iris(results_path) :
     with st.expander("🧠 Correlation Heatmap"):
         st.image(f"{results_path}/CorrelationHeatmap.jpg", use_container_width=True)
 
-    # col3, col4 = st.columns(2)
+    with st.expander("🎻 Violin Plots"):
+        st.image(f"{results_path}/ViolinPlots.jpg", use_container_width=True)
 
-    with col1:
-        with st.expander("🎻 Violin Plots"):
-            st.image(f"{results_path}/ViolinPlots.jpg", use_container_width=True)
-
-    with col2:
-        with st.expander("🎯 Strip Plots"):
-            st.image(f"{results_path}/StripPlots.jpg", use_container_width=True)
+    with st.expander("🎯 Strip Plots"):
+        st.image(f"{results_path}/StripPlots.jpg", use_container_width=True)
 
     with st.expander("🧩 Pair Plot"):   
         st.image(f"{results_path}/PairPlot.jpg", use_container_width="auto")

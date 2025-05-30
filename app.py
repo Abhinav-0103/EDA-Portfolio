@@ -6,9 +6,11 @@ if "sidebar_state" not in st.session_state :
 
 st.set_page_config(
     page_title="EDA Portfolio",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state=st.session_state.sidebar_state
     )
+
+st.title("EDA Portfolio")
 
 def collapse_sidebar() :
     st.session_state.sidebar_state = "collapsed" if st.session_state.sidebar_state == "epxanded" else "collapsed"
